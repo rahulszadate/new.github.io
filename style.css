@@ -1,0 +1,108 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+
+
+
+body{
+    background-image:url(arnold-francisca-f77Bh3inUpE-unsplash.jpg); 
+    background-repeat: no-repeat;
+    background-size:cover;
+    height: 100vh;
+    
+    background-position: center; 
+    backdrop-filter: blur(5px);
+    
+   
+
+}
+
+header{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    
+    background: rgba(32, 26, 26, 0.5);
+}
+
+
+
+
+header ul{
+    flex: 2;
+    display: flex;
+    justify-content: right;
+}
+i{
+    color: #fff;
+    cursor: pointer;
+    
+}
+
+header .logo{
+   
+    margin-left: 30px;
+}
+header ul li{
+    display: inline-block;
+    list-style: none;
+    padding: 0px 10px;
+}
+header ul li a{
+    text-decoration: none;
+    color: #fff;
+    font-weight: 600 ;
+    text-transform: uppercase;
+    padding: 10px 10px;
+     
+
+}
+header ul li a:hover{
+    border-bottom: 2px solid cadetblue;
+    color: cadetblue;
+}
+#checkbtn{
+    float: right;
+    display: none;
+    margin-right: 10px;
+}
+#check{
+    display: none;
+}
+
+
+@media(max-width:1020px){
+  
+   #checkbtn{
+        font-size: 2em;
+        display: block;
+    }
+
+    header ul{
+        position: fixed;
+        width: 100%;
+        height: 50vh;
+        top: 100px;
+        background:rgba(32, 26, 26, 0.5);
+        right:-100%;
+        text-align: center;
+        flex-direction: column;
+        justify-content: space-evenly;
+        transition: all 0.5s;
+    }
+    header ul li{
+        display:block;
+        
+    }
+    #check:checked~ul{
+        right:0;
+    }
+
+}
